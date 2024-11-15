@@ -25,6 +25,7 @@ function twoSum(arr, target) {
 console.log("Target Value ---> ", res);
 
 // optimal solution using Hash Map
+
 // Time Complexity: O(N), where N = size of the array.
 // Reason: The loop runs N times in the worst case and searching in a hashmap takes O(1) generally. So the time complexity is O(N).
 // Space Complexity: O(N) as we use the map data structure.
@@ -44,7 +45,6 @@ function twoSumHash(arr, target) {
   for (let key = 0; key < arr.length; key++) {
     let complement = target - arr[key]; // cal the complement
     if (targetObj.hasOwnProperty(complement)) {
-      //   console.log(targetObj[complement], key);
       return [targetObj[complement], key];
     }
     targetObj[arr[key]] = key; // eg = (3, 0) // actual storing the value as a key and key as value to use it again.
