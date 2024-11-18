@@ -12,17 +12,18 @@ function isSubset(a1, a2, n, m) {
   for (let i = 0; i < a2.length; i++) {
     if (!hashMap.has(a2[i])) {
       return "No";
-    } else {
+    }
+    // decrement the value of if no duplicate
+    else {
       hashMap[a2[i]] -= 1;
     }
   }
-
   return "Yes"; // All elements of a2 were found in a1
 }
 let res = isSubset(a1, a2);
 console.log(res);
 
-// using hashmap 
+// using hashmap
 /* 
 complexity ---> time - O(n);
            ---> space - O(n)
@@ -30,17 +31,19 @@ complexity ---> time - O(n);
 */
 function isSubsetWithHashMap(a1, a2) {
   let hashMap = {};
-  for (let i = 0; i < a1.length; i++) {    // O(n)
+  for (let i = 0; i < a1.length; i++) {
+    // O(n)
+    // check for the occurence of the values in array and store in hashmap...
     hashMap[a1[i]] = (hashMap[a1[i]] || 0) + 1;
   }
-
   // Step 2: Check every element of a2 in hashMap
-  for (let i = 0; i < a2.length; i++) {   // O(m)
+  for (let i = 0; i < a2.length; i++) {
+    // O(m)
     if (hashMap[a1[i]] !== a2[i]) {
       return "No"; // Return "No" if any element of a2 is not in a1
     } else {
       // Decrement the count of the matched element
-      hashMap[a2[i]]--;
+      hashMap[a2[i]] -= 1;
     }
   }
   return "Yes"; // All elements of a2 were found in a1
