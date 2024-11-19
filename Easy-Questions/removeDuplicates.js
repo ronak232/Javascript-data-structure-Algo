@@ -20,7 +20,7 @@ Space Complexity:
 𝑂(1) as we modify nums in-place without using extra space.
 */
 
-var arr = [1, 1, 2, 4, 5, 5, 6];
+var arr = [0, 3, 1, 2, 2, 1];
 
 function removeDuplicatesElement(arr) {
   // Code Here
@@ -38,7 +38,25 @@ function removeDuplicatesElement(arr) {
 }
 
 let res = removeDuplicatesElement(arr);
-console.log(res);
+// console.log(res);
 
 // using hashing
 
+function findDuplicates(arr) {
+  let hashMap = {};
+  let duplicate = [];
+
+  for (let key of arr) {
+    hashMap[key] = (hashMap[key] || 0) + 1;
+  }
+
+  for (let key in hashMap) {
+    if (hashMap[key] > 1) {
+      duplicate.push(key);
+    }
+  }
+  return duplicate;
+}
+
+let result = findDuplicates(arr);
+console.log(result);
