@@ -1,6 +1,6 @@
-let arr = [3, 5, 3, 5, 5, [4, 6]];
-let target = 13;
-let res = twoSum(arr, target);
+let arr = [3, 5, 3, 5, 4, 6];
+let target = 8;
+// let res = twoSum(arr, target);
 
 // brute force solution
 /*
@@ -21,8 +21,8 @@ function twoSum(arr, target) {
   }
   return [];
 }
-
-console.log("Target Value ---> ", res);
+let res = twoSum(arr, target);
+console.log(res);
 
 // optimal solution using Hash Map
 
@@ -42,8 +42,8 @@ console.log("Hashing approach...");
 
 function twoSumHash(arr, target) {
   let targetObj = {};
-  for (let key = 0; key < arr.length; key++) {
-    let complement = target - arr[key]; // cal the complement
+  for (let key of arr) {
+    let complement = target - arr[key]; // calc the complement  
     if (targetObj.hasOwnProperty(complement)) {
       return [targetObj[complement], key];
     }
@@ -52,7 +52,7 @@ function twoSumHash(arr, target) {
   return []; // return empty return
 }
 
-let hashRes = twoSumHash(arr, target);
+let hashRes = twoSumHash(arr, target = 10);
 console.log(hashRes);
 
 /* 

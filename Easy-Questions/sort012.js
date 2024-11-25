@@ -22,17 +22,14 @@ function sort012(arr) {
   // in-place the 0s 1s and 2s
   for (let i = 0; i < count0; i++) {
     arr[replaceI++] = 0;
-    console.log("Place 0 --->", arr, replaceI);
   }
 
   for (let i = 0; i < count1; i++) {
     arr[replaceI++] = 1;
-    console.log("Place 1 --->", arr, replaceI);
   }
 
   for (let i = 0; i < count2; i++) {
     arr[replaceI++] = 2;
-    console.log("Place 2 --->", arr, replaceI);
   }
 }
 
@@ -42,4 +39,28 @@ console.log(res);
 
 /* Dutch national flag algorithm solution... */
 
+function sort012DNF(arr) {
+  let low = 0;
+  let mid = 0;
+  let high = arr.length - 1;
+  
+  while(mid <= high) {
+    if(arr[mid] === 0){
+      [arr[low], arr[mid]] = [arr[mid], arr[low]];
+      low++;
+      mid++;
+    }
 
+    if(arr[mid] === 1){
+      mid++
+    }
+
+    if(arr[mid] === 2) {
+      [arr[mid], arr[high]] = [arr[high], arr[mid]];
+      high--;
+    }
+  }  
+}
+
+let res1 = sort012DNF(arr);
+console.log(res1);
