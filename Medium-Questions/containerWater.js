@@ -1,10 +1,9 @@
 var arr = [1,8,6,2,5,4,8,3,7];
 /**
- * 
- * @param {} arr[]
+ * @param arr[]
  * @returns maxWaterArea
  * 
- * First Brute force
+ * First Brute force Solution
  * Time complexity - O(n*n);
  * Space Complexity - O(1)
  */
