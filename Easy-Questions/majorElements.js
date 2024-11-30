@@ -1,6 +1,5 @@
 // -------------------Moore's Voting Algorithm ----------//
 
-
 var arr = [6, 8, 5];
 /* 
 -->res and majority are initialized to 0.
@@ -20,7 +19,7 @@ function majorElement(arr) {
 
   for (let key of arr) {
     if (hashMap[key] > majorityElem) {
-      res = key;  // assign the index of that majority value[key]
+      res = key; // assign the index of that majority value[key]
       majorityElem = hashMap[key];
     }
   }

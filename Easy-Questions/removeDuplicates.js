@@ -41,7 +41,6 @@ let res = removeDuplicatesElement(arr);
 // console.log(res);
 
 // using hashing
-
 function findDuplicates(arr) {
   let hashMap = {};
   let duplicate = [];

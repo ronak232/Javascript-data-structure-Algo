@@ -39,6 +39,17 @@ console.log(res);
 
 /* Dutch national flag algorithm solution... */
 
+/**
+ * 
+ * @param arr[]
+ * 
+ * [0,1, 2, 2, 0 ,1, 1]
+ * 
+ * mid = 0 --> low <-> mid
+ * mid = 1   do nothing
+ * mid = 2 --> high <-> mid
+ */
+
 function sort012DNF(arr) {
   let low = 0;
   let mid = 0;
