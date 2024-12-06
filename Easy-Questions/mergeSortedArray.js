@@ -1,4 +1,4 @@
-var merge = function (nums1, m, nums2, n) {
+function mergeTwoArray(nums1, m, nums2, n) {
   let i = m - 1;
   let j = n - 1;
   let k = m + n - 1;
@@ -21,3 +21,14 @@ var merge = function (nums1, m, nums2, n) {
     k -= 1;
   }
 };
+
+let nums1 = [1, 2, 4, 5];
+let nums2 = [2,5, 6, 7]
+
+const res = mergeTwoArray(nums1, m=4, nums2, n=4)
+console.log(res);
+
+/**
+ * TC - O(n)
+ * SC - O(1)
+ */

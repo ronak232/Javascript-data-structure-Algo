@@ -51,7 +51,7 @@ console.log(res);
  * Input: [3, 5, -2, -3, -6, -6]
     Step 1: Frequency map → { 3: 1, 5: 1, -2: 1, -3: 1, -6: 2 }
     Step 2: Unique frequencies → Set { 1, 2 }
-    Step 3: Compare sizes → storeFrequencies.size (2) !== Object.keys(hashMap).length (5)
+    Step 3: Compare sizes → storeFrequencies.size !== Object.keys(hashMap).length --> 2 !== 5
     Output: false
  * 
  * 

@@ -38,3 +38,8 @@ function findDuplicateHash(arr) {
 
 const res2 = findDuplicateHash(arr);
 console.log(res2);
+
+// using indexOf and filter
+
+const duplicates = arr.filter((item, index) => array.indexOf(item) !== index);
+console.log(duplicates);
