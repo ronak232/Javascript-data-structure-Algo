@@ -2,12 +2,12 @@
 Two-pointers approach
 step - 1 check if array is empty or not...
 
-step - 2 define the initial index firstIndex and nextIndex i.e. firstIndex = 0, nextIndex = 1
+step - 2 define the initial index i and j i.e. i = 0, j = 1
 
 step - 3 iterate over the given array
-      --> check if firstIndex and nextIndex values --> i.e. if they are same or not
-      --> increment firstIndex value... if not 
-      --> compare again with nextIndex
+      --> check if i and j values --> i.e. if they are same or not
+      --> increment i value... if not 
+      --> compare again with j
 
 step 4 return the unique elements from array...
 */
@@ -28,17 +28,17 @@ function removeDuplicatesElement(arr) {
   let j = 1;
 
   while (j < arr.length) {
-    if (arr[j] !== arr[j]) {
+    if (arr[j] !== arr[i]) {
       i++;
       arr[i] = arr[j];
     }
-    j++;
+    j++; // increment the j value... 
   }
   return i + 1; // firstIndex check the unique index elements...
 }
 
 let res = removeDuplicatesElement(arr);
-// console.log(res);
+console.log(res);
 
 // using hashing
 function findDuplicates(arr) {
