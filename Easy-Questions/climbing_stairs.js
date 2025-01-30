@@ -29,6 +29,7 @@ var climbStairs = function (n) {
 /**
  * @param {number} n
  * @return {number}
+ * tc - O(n) sc- O(n)
  */
 var climbStairs = function (n) {
     if (n === 0 || n === 1) return 1;
@@ -69,3 +70,26 @@ var climbStairs = function (n) {
 
 // Return dp[5] = 8.
 
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function (n) {
+    if (n === 0 || n === 1) return 1;
+    let first = 1;
+    let second = 1;
+    for (let i = 2; i <= n; i++) {
+        let third = first + second;
+        first = second;
+        second = third;
+    }
+    return second;
+};
+
+/**
+ * Base Cases: If n is 0 or 1, return 1 because there is only one way to climb 0 or 1 step.
+Initialization: Use two variables, first and second, both initialized to 1. These represent the number of ways to reach the first and second steps, respectively.
+Iteration: Loop from 2 to n. In each iteration, calculate the number of ways to reach the current step (third) by summing the ways to reach the two previous steps (first and second).
+Update: Update first to second and second to third for the next iteration.
+Result: Return second, which represents the number of ways to reach the n-th step.
+ */
