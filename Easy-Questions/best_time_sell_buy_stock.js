@@ -35,7 +35,7 @@ function maxProfit(prices) {
 
 /** Explaination
  * 
- * Day 0: First price is 7, so we set minPrice to 7. No profit can be made yet.
+Day 0: First price is 7, so we set minPrice to 7. No profit can be made yet.
 Day 1: Price drops to 1, which is the lowest so far. Update minPrice to 1.
 Day 2: Price increases to 5. The profit from buying at 1 and selling at 5 is 4, so update maxProfit to 4.
 Day 3: Price drops to 3. Profit from buying at 1 and selling at 3 is 2. maxProfit remains 4 as this profit is smaller.

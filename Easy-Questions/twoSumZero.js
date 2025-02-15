@@ -46,4 +46,3 @@ function twoSumZeroDNF(arr) {
 
 let result = twoSumZeroDNF(arr);
 console.log(result);
-console.log(!!"");
