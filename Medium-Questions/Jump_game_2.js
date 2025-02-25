@@ -49,6 +49,4 @@ Check if we have reached the end of our current jump range:
 Since i (0) == currentEnd (0), we need to make a jump.
 Increment jumps: jumps++ → jumps = 1
 Update currentEnd: currentEnd = farthest → currentEnd = 2
-
-
- */
+*/

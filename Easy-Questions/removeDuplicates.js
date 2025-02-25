@@ -21,6 +21,10 @@ Space Complexity:
 */
 
 var arr = [0, 3, 1, 2, 2, 1];
+// i = 0
+// [3, 3, 1, 2, 2, 1]
+// i = 1
+ 
 
 function removeDuplicatesElement(arr) {
   // Code Here
@@ -32,7 +36,7 @@ function removeDuplicatesElement(arr) {
       i++;
       arr[i] = arr[j];
     }
-    j++; // increment the j value... 
+    j++; // increment the j value...
   }
   return i + 1; // firstIndex check the unique index elements...
 }
